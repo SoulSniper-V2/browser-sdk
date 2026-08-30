@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SoulSniper-V2/browser-sdk.git",
+    "url": "git+https://github.com/SoulSniper-V2/browser-sdk.git",
     "directory": "packages/browser-sdk"
   },
   "type": "module",
@@ -31,7 +31,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "browser-sdk": "./dist/cli.js"
+    "browser-sdk": "dist/cli.js"
   },
   "exports": {
     ".": {
