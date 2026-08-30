@@ -1,0 +1,30 @@
+{
+  "name": "browser-sdk-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Browser SDK provider-neutral browser tools.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "browser-sdk-mcp": "./dist/index.js"
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "browser-sdk": "0.1.0",
+    "playwright-core": "^1.58.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
