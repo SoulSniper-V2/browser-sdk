@@ -35,7 +35,7 @@ When local source and published docs disagree, prefer the installed package type
 ## Use the provider-neutral client
 
 ```ts
-import { fromEnv } from "browser-sdk";
+import { fromEnv } from "@soulsniper-v2/browser-sdk";
 
 const browser = fromEnv();
 const page = await browser.markdown("https://example.com", {
@@ -98,14 +98,14 @@ Use deterministic Playwright locators and web-first assertions for known workflo
 For an agent inside your application:
 
 ```ts
-import { createBrowserTools } from "browser-sdk/agent-tools";
+import { createBrowserTools } from "@soulsniper-v2/browser-sdk/agent-tools";
 const tools = createBrowserTools(browser);
 ```
 
 For an MCP client:
 
 ```bash
-npx -y browser-sdk-mcp
+npx -y @soulsniper-v2/browser-sdk-mcp
 ```
 
 The MCP server exposes both stateless read tools and an explicit stateful browser runtime. Use Markdown, extract, links, route, snapshot, and crawl for read-only context. When the agent must operate a browser itself, use this sequence:
@@ -125,9 +125,9 @@ The session tools keep CDP URLs and provider credentials inside the MCP process 
 The package CLI is useful for quick, non-interactive checks:
 
 ```bash
-npx browser-sdk https://example.com
-npx browser-sdk route markdown
-npx browser-sdk doctor
+npx @soulsniper-v2/browser-sdk https://example.com
+npx @soulsniper-v2/browser-sdk route markdown
+npx @soulsniper-v2/browser-sdk doctor
 ```
 
 ## Testing
@@ -135,8 +135,8 @@ npx browser-sdk doctor
 Use the memory provider for network-free tests:
 
 ```ts
-import { createBrowserClient } from "browser-sdk";
-import { memoryProvider } from "browser-sdk/testing";
+import { createBrowserClient } from "@soulsniper-v2/browser-sdk";
+import { memoryProvider } from "@soulsniper-v2/browser-sdk/testing";
 
 const browser = createBrowserClient({
   providers: [memoryProvider({ content: "<h1>fixture</h1>" })],

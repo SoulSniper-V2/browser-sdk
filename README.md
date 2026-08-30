@@ -1,17 +1,20 @@
 # Browser SDK
 
+[![npm version](https://img.shields.io/npm/v/%40soulsniper-v2%2Fbrowser-sdk.svg)](https://www.npmjs.com/package/@soulsniper-v2/browser-sdk)
+[![CI](https://github.com/SoulSniper-V2/browser-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/SoulSniper-V2/browser-sdk/actions/workflows/ci.yml)
+
 One TypeScript API for browser sessions, rendered artifacts, and provider failover.
 
 Browser SDK keeps browser infrastructure out of the rest of your application. Configure Browserbase first, Cloudflare Browser Run next, then any other adapters you have. Your caller keeps the same method and receives the provider, latency, and failover trail that produced the result.
 
 ```bash
-npm install browser-sdk
+npm install @soulsniper-v2/browser-sdk
 ```
 
 ## The short version
 
 ```ts
-import { fromEnv } from "browser-sdk";
+import { fromEnv } from "@soulsniper-v2/browser-sdk";
 
 const browser = fromEnv();
 const page = await browser.markdown("https://docs.example.com", {
@@ -47,21 +50,21 @@ For a longer cloud runway, set `BROWSER_SDK_EXTENDED_PROVIDERS=true` or pass `in
 - Crawl bounded sites with `crawl()` when Cloudflare Browser Run is configured.
 - Create browser sessions and connect with Playwright, Puppeteer, Selenium, or raw CDP.
 - Inspect the route before calling it with `routePreview()`.
-- Adapt the plain JSON Schema tools to your own model loop with `browser-sdk/agent-tools`.
-- Use `browser-sdk-mcp` from Codex, Claude Code, Cursor, or another MCP client.
+- Adapt the plain JSON Schema tools to your own model loop with `@soulsniper-v2/browser-sdk/agent-tools`.
+- Use `@soulsniper-v2/browser-sdk-mcp` from Codex, Claude Code, Cursor, or another MCP client.
 
 This is an infrastructure building block, not a claim that multi-provider browser routing is an empty market. Provider SDKs, Playwright MCP, and browser gateways already exist. The reason to use this package is the small in-process TypeScript contract: capability-aware read failover, typed artifacts, pinned session cleanup, and agent docs/MCP in the same repository. See [`docs/positioning.md`](docs/positioning.md) for the tradeoffs.
 
 ## Two layers, one core
 
-The `browser-sdk` package is the application API: your server imports it and owns authorization, workflow state, and side effects. The repository's agent layer is how an agent learns and operates it: `SKILL.md` gives procedural guidance, `npx browser-sdk` handles one-off CLI work, and `browser-sdk-mcp` gives an agent a stateful session it can navigate, snapshot, act on, read, screenshot, and close.
+The `@soulsniper-v2/browser-sdk` package is the application API: your server imports it and owns authorization, workflow state, and side effects. The repository's agent layer is how an agent learns and operates it: `SKILL.md` gives procedural guidance, `npx @soulsniper-v2/browser-sdk` handles one-off CLI work, and `@soulsniper-v2/browser-sdk-mcp` gives an agent a stateful session it can navigate, snapshot, act on, read, screenshot, and close.
 
 ## Live sessions
 
 The SDK does not force a browser automation library into your bundle. It returns a standard CDP URL from cloud providers and a native Playwright handle from the local adapter.
 
 ```ts
-import { fromEnv } from "browser-sdk";
+import { fromEnv } from "@soulsniper-v2/browser-sdk";
 import { chromium } from "playwright-core";
 
 const browser = fromEnv();
@@ -90,15 +93,15 @@ await browser.withSession(
 ## Explicit providers
 
 ```ts
-import { createBrowserClient } from "browser-sdk";
-import { browserbase } from "browser-sdk/browserbase";
-import { cloudflare } from "browser-sdk/cloudflare";
-import { browserless } from "browser-sdk/browserless";
-import { steel } from "browser-sdk/steel";
-import { anchor } from "browser-sdk/anchor";
-import { hyperbrowser } from "browser-sdk/hyperbrowser";
-import { browserUse } from "browser-sdk/browser-use";
-import { local } from "browser-sdk/local";
+import { createBrowserClient } from "@soulsniper-v2/browser-sdk";
+import { browserbase } from "@soulsniper-v2/browser-sdk/browserbase";
+import { cloudflare } from "@soulsniper-v2/browser-sdk/cloudflare";
+import { browserless } from "@soulsniper-v2/browser-sdk/browserless";
+import { steel } from "@soulsniper-v2/browser-sdk/steel";
+import { anchor } from "@soulsniper-v2/browser-sdk/anchor";
+import { hyperbrowser } from "@soulsniper-v2/browser-sdk/hyperbrowser";
+import { browserUse } from "@soulsniper-v2/browser-sdk/browser-use";
+import { local } from "@soulsniper-v2/browser-sdk/local";
 
 const browser = createBrowserClient({
   providers: [
@@ -167,7 +170,7 @@ Successful results include `failedOverFrom` when a hop happened:
 ## Agent tools
 
 ```ts
-import { createBrowserTools } from "browser-sdk/agent-tools";
+import { createBrowserTools } from "@soulsniper-v2/browser-sdk/agent-tools";
 
 const tools = createBrowserTools(browser);
 ```
@@ -183,16 +186,16 @@ npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk
 Run a one-off read or inspect the configured route without writing application code:
 
 ```bash
-npx browser-sdk https://example.com
-npx browser-sdk route markdown
-npx browser-sdk doctor
+npx @soulsniper-v2/browser-sdk https://example.com
+npx @soulsniper-v2/browser-sdk route markdown
+npx @soulsniper-v2/browser-sdk doctor
 ```
 
 ## MCP
 
 ```bash
-npm install browser-sdk-mcp
-npx -y browser-sdk-mcp
+npm install @soulsniper-v2/browser-sdk-mcp
+npx -y @soulsniper-v2/browser-sdk-mcp
 ```
 
 The MCP server exposes stateless read tools plus an explicit stateful browser runtime. Agents can start a session, navigate, snapshot for accessibility refs, take one action, read or screenshot the result, and close the session. See [`packages/browser-sdk-mcp/README.md`](packages/browser-sdk-mcp/README.md) and [`examples/mcp.json`](examples/mcp.json).
@@ -221,6 +224,10 @@ npm run dev
 ```
 
 The SDK test suite uses a network-free memory provider and explicit failure injection. Provider adapters accept injected `fetch` behavior through the client so request mapping can be tested without live credentials.
+
+## Releases
+
+Both public packages share one version. Update the versions in `packages/browser-sdk/package.json` and `packages/browser-sdk-mcp/package.json`, keep the MCP dependency pinned to that exact SDK version, then push a `vX.Y.Z` tag. `.github/workflows/publish.yml` verifies the tag and manifests, runs the complete check, inspects both tarballs, and publishes missing versions through npm Trusted Publishing with provenance.
 
 ## Project layout
 

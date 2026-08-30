@@ -1,10 +1,12 @@
-# browser-sdk-mcp
+# @soulsniper-v2/browser-sdk-mcp
+
+[![npm version](https://img.shields.io/npm/v/%40soulsniper-v2%2Fbrowser-sdk-mcp.svg)](https://www.npmjs.com/package/@soulsniper-v2/browser-sdk-mcp)
 
 MCP server for [Browser SDK](../../packages/browser-sdk/README.md). It gives Codex, Claude Code, Cursor, and other MCP clients a small browser tool surface backed by the same provider runway as the TypeScript client.
 
 ```bash
-npm install browser-sdk-mcp
-npx -y browser-sdk-mcp
+npm install @soulsniper-v2/browser-sdk-mcp
+npx -y @soulsniper-v2/browser-sdk-mcp
 ```
 
 ```json
@@ -12,7 +14,7 @@ npx -y browser-sdk-mcp
   "mcpServers": {
     "browser-sdk": {
       "command": "npx",
-      "args": ["-y", "browser-sdk-mcp"],
+      "args": ["-y", "@soulsniper-v2/browser-sdk-mcp"],
       "env": {
         "BROWSERBASE_API_KEY": "bb_...",
         "CLOUDFLARE_API_TOKEN": "...",

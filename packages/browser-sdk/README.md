@@ -1,13 +1,15 @@
 # browser-sdk
 
+[![npm version](https://img.shields.io/npm/v/%40soulsniper-v2%2Fbrowser-sdk.svg)](https://www.npmjs.com/package/@soulsniper-v2/browser-sdk)
+
 Provider-neutral browser infrastructure for TypeScript. Start with Browserbase, fall through Cloudflare Browser Run, Browserless, Steel, optional extended cloud adapters, or local Playwright, and keep one typed caller.
 
 ```bash
-npm install browser-sdk
+npm install @soulsniper-v2/browser-sdk
 ```
 
 ```ts
-import { fromEnv } from "browser-sdk";
+import { fromEnv } from "@soulsniper-v2/browser-sdk";
 
 const browser = fromEnv();
 const result = await browser.markdown("https://example.com");
@@ -36,14 +38,14 @@ console.log(`via ${result.provider} in ${result.latencyMs}ms`);
 ## Provider subpaths
 
 ```ts
-import { browserbase } from "browser-sdk/browserbase";
-import { cloudflare } from "browser-sdk/cloudflare";
-import { browserless } from "browser-sdk/browserless";
-import { steel } from "browser-sdk/steel";
-import { anchor } from "browser-sdk/anchor";
-import { hyperbrowser } from "browser-sdk/hyperbrowser";
-import { browserUse } from "browser-sdk/browser-use";
-import { local } from "browser-sdk/local";
+import { browserbase } from "@soulsniper-v2/browser-sdk/browserbase";
+import { cloudflare } from "@soulsniper-v2/browser-sdk/cloudflare";
+import { browserless } from "@soulsniper-v2/browser-sdk/browserless";
+import { steel } from "@soulsniper-v2/browser-sdk/steel";
+import { anchor } from "@soulsniper-v2/browser-sdk/anchor";
+import { hyperbrowser } from "@soulsniper-v2/browser-sdk/hyperbrowser";
+import { browserUse } from "@soulsniper-v2/browser-sdk/browser-use";
+import { local } from "@soulsniper-v2/browser-sdk/local";
 ```
 
 The package also exports `browser-sdk/testing` for the isolated memory provider and `browser-sdk/agent-tools` for plain JSON Schema model tools.
@@ -61,9 +63,9 @@ npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk
 The package is also executable through `npx` for one-off page reads and local configuration checks. The CLI uses `BROWSER_SDK_EXTENDED_PROVIDERS=true` when you want the extended providers included:
 
 ```bash
-npx browser-sdk https://example.com
-npx browser-sdk route markdown
-npx browser-sdk doctor
+npx @soulsniper-v2/browser-sdk https://example.com
+npx @soulsniper-v2/browser-sdk route markdown
+npx @soulsniper-v2/browser-sdk doctor
 ```
 
 ## Provider order

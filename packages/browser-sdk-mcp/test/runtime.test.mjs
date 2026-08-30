@@ -3,8 +3,8 @@ import assert from "node:assert/strict";
 import { createServer } from "node:http";
 import { once } from "node:events";
 import { chromium } from "playwright-core";
-import { createBrowserClient } from "browser-sdk";
-import { local } from "browser-sdk/local";
+import { createBrowserClient } from "@soulsniper-v2/browser-sdk";
+import { local } from "@soulsniper-v2/browser-sdk/local";
 import { BrowserRuntime } from "../dist/runtime.js";
 
 let server;

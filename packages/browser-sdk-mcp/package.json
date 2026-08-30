@@ -1,5 +1,5 @@
 {
-  "name": "browser-sdk-mcp",
+  "name": "@soulsniper-v2/browser-sdk-mcp",
   "version": "0.1.0",
   "description": "MCP server for Browser SDK provider-neutral browser tools.",
   "type": "module",
@@ -8,6 +8,7 @@
     "browser-sdk-mcp": "./dist/index.js"
   },
   "files": ["dist", "README.md"],
+  "sideEffects": false,
   "scripts": {
     "build": "tsc -p tsconfig.json && chmod +x dist/index.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
@@ -15,7 +16,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.5",
-    "browser-sdk": "0.1.0",
+    "@soulsniper-v2/browser-sdk": "0.1.0",
     "playwright-core": "^1.58.2",
     "zod": "^3.25.76"
   },
@@ -26,5 +27,22 @@
   "engines": {
     "node": ">=20"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoulSniper-V2/browser-sdk.git",
+    "directory": "packages/browser-sdk-mcp"
+  },
+  "homepage": "https://github.com/SoulSniper-V2/browser-sdk#readme",
+  "keywords": [
+    "browser-automation",
+    "mcp",
+    "model-context-protocol",
+    "ai-agents",
+    "browserbase",
+    "cloudflare"
+  ]
 }

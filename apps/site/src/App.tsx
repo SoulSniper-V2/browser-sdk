@@ -51,7 +51,7 @@ const operationLabels: Record<Operation, string> = {
 };
 
 const codeSnippets: Record<Snippet, string> = {
-  session: `import { fromEnv } from "browser-sdk";
+  session: `import { fromEnv } from "@soulsniper-v2/browser-sdk";
 import { chromium } from "playwright-core";
 
 const browser = fromEnv();
@@ -70,7 +70,7 @@ await browser.withSession({}, async (session) => {
 console.log(page.markdown);
 console.log(page.provider);
 console.log(page.failedOverFrom);`,
-  agent: `import { createBrowserTools } from "browser-sdk/agent-tools";
+  agent: `import { createBrowserTools } from "@soulsniper-v2/browser-sdk/agent-tools";
 
 const tools = createBrowserTools(browser);
 
@@ -196,7 +196,7 @@ function Hero({ openDocs }: { openDocs: (doc?: DocId) => void }) {
             <a className="button button-quiet" href="https://github.com/SoulSniper-V2/browser-sdk" target="_blank" rel="noreferrer">View source <ArrowRight size={15} weight="bold" /></a>
           </div>
           <div className="hero-install-stack">
-            <InstallLine label="package" value="npm install browser-sdk" />
+            <InstallLine label="package" value="npm install @soulsniper-v2/browser-sdk" />
             <InstallLine label="agent skill" value="npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk" />
           </div>
         </div>
@@ -294,7 +294,7 @@ function AgentSection({ openDocs }: { openDocs: (doc?: DocId) => void }) {
     <section className="agent-section" id="agents" aria-labelledby="agent-title" data-reveal>
       <div className="section-frame agent-grid">
         <div className="agent-copy"><span className="eyebrow">/ 04 · for agents</span><h2 id="agent-title">Install the context before you ask for the code.</h2><p>The skill tells coding agents when to use Browser SDK, how the route behaves, what not to replay, and where the machine-readable docs live.</p><button className="text-link" onClick={() => openDocs("agents")} type="button">Read the agent guide <ArrowUpRight size={14} weight="bold" /></button></div>
-        <div className="agent-install-panel"><div className="agent-install-top"><span className="agent-install-icon"><TerminalWindow size={17} weight="bold" /></span><div><span>Agent skill</span><strong>browser-sdk</strong></div><span className="agent-install-status"><span className="status-dot" /> ready to install</span></div><div className="agent-command"><span>$</span><code>npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk</code><CopyButton value="npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk" label="Copy" compact /></div><div className="agent-command agent-command-secondary"><span>$</span><code>npx -y browser-sdk-mcp</code><CopyButton value="npx -y browser-sdk-mcp" label="Copy" compact /></div><div className="agent-install-foot"><span><Check size={14} weight="bold" /> SKILL.md</span><span><Check size={14} weight="bold" /> MCP session tools</span><span><Check size={14} weight="bold" /> provider rules</span><a href="/skills/browser-sdk/SKILL.md" target="_blank" rel="noreferrer">View raw skill <ArrowUpRight size={12} /></a></div></div>
+        <div className="agent-install-panel"><div className="agent-install-top"><span className="agent-install-icon"><TerminalWindow size={17} weight="bold" /></span><div><span>Agent skill</span><strong>browser-sdk</strong></div><span className="agent-install-status"><span className="status-dot" /> ready to install</span></div><div className="agent-command"><span>$</span><code>npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk</code><CopyButton value="npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk" label="Copy" compact /></div><div className="agent-command agent-command-secondary"><span>$</span><code>npx -y @soulsniper-v2/browser-sdk-mcp</code><CopyButton value="npx -y @soulsniper-v2/browser-sdk-mcp" label="Copy" compact /></div><div className="agent-install-foot"><span><Check size={14} weight="bold" /> SKILL.md</span><span><Check size={14} weight="bold" /> MCP session tools</span><span><Check size={14} weight="bold" /> provider rules</span><a href="/skills/browser-sdk/SKILL.md" target="_blank" rel="noreferrer">View raw skill <ArrowUpRight size={12} /></a></div></div>
       </div>
     </section>
   );

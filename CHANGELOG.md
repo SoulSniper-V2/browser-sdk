@@ -3,7 +3,7 @@
 ## Unreleased
 
 - Added first-class Fumadocs MDX documentation sourced from `docs/`.
-- Added `npx browser-sdk <url>`, `doctor`, and `skill` CLI commands.
+- Added `npx @soulsniper-v2/browser-sdk <url>`, `doctor`, and `skill` CLI commands.
 - Added the visible `npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk` install path and hosted raw skill route.
 - Added a stateful MCP browser runtime with session start, navigation, accessibility refs, explicit actions, reads, screenshots, allowlists, and cleanup.
 - Reworked the homepage around a clean route-first product story with a repaired logo, transparent hero art, and restrained motion.

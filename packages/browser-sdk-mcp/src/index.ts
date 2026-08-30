@@ -2,7 +2,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { fromEnv } from "browser-sdk";
+import { fromEnv } from "@soulsniper-v2/browser-sdk";
 import { BrowserRuntime } from "./runtime.js";
 
 type ToolContent =

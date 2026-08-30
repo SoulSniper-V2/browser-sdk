@@ -6,7 +6,7 @@ description: Install the package and make a provider-neutral browser call.
 ## Install
 
 ```bash
-npm install browser-sdk
+npm install @soulsniper-v2/browser-sdk
 # Optional, for local browser sessions:
 npm install playwright-core
 ```
@@ -14,7 +14,7 @@ npm install playwright-core
 ## Create the client
 
 ```ts
-import { fromEnv } from "browser-sdk";
+import { fromEnv } from "@soulsniper-v2/browser-sdk";
 
 const browser = fromEnv({
   timeoutMs: 30_000,
@@ -73,10 +73,10 @@ console.log(browser.routePreview("screenshot"));
 For a one-off page read or a route check, the package exposes a small CLI:
 
 ```bash
-npx browser-sdk https://example.com
-npx browser-sdk markdown https://example.com
-npx browser-sdk route markdown
-npx browser-sdk doctor
+npx @soulsniper-v2/browser-sdk https://example.com
+npx @soulsniper-v2/browser-sdk markdown https://example.com
+npx @soulsniper-v2/browser-sdk route markdown
+npx @soulsniper-v2/browser-sdk doctor
 ```
 
 The CLI uses the same environment variables and provider order as `fromEnv()`. It never sends a provider request for `route` or `doctor`.

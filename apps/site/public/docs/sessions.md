@@ -4,7 +4,7 @@ description: Connect your browser library to whichever provider wins the route.
 ---
 
 ```ts
-import { fromEnv } from "browser-sdk";
+import { fromEnv } from "@soulsniper-v2/browser-sdk";
 import { chromium } from "playwright-core";
 
 const browser = fromEnv();

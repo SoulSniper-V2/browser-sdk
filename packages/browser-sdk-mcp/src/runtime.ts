@@ -1,6 +1,6 @@
 import { chromium, type Browser, type Locator, type Page } from "playwright-core";
-import { BrowserSdkError } from "browser-sdk";
-import type { BrowserClient, BrowserSession, SessionOptions } from "browser-sdk";
+import { BrowserSdkError } from "@soulsniper-v2/browser-sdk";
+import type { BrowserClient, BrowserSession, SessionOptions } from "@soulsniper-v2/browser-sdk";
 
 export type BrowserSessionStartOptions = SessionOptions & { url?: string };
 

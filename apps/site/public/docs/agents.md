@@ -6,7 +6,7 @@ description: Give model loops a small, typed browser surface.
 `browser-sdk/agent-tools` exports framework-neutral tools with plain JSON Schema. There is no model-provider dependency.
 
 ```ts
-import { createBrowserTools } from "browser-sdk/agent-tools";
+import { createBrowserTools } from "@soulsniper-v2/browser-sdk/agent-tools";
 
 const tools = createBrowserTools(browser);
 ```
@@ -66,7 +66,7 @@ The server keeps CDP URLs and provider credentials inside its own process. It re
 The package itself is runnable through `npx` for quick reads and route inspection:
 
 ```bash
-npx browser-sdk https://example.com
-npx browser-sdk route markdown
-npx browser-sdk doctor
+npx @soulsniper-v2/browser-sdk https://example.com
+npx @soulsniper-v2/browser-sdk route markdown
+npx @soulsniper-v2/browser-sdk doctor
 ```

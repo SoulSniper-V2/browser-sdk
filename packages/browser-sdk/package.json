@@ -1,5 +1,5 @@
 {
-  "name": "browser-sdk",
+  "name": "@soulsniper-v2/browser-sdk",
   "version": "0.1.0",
   "description": "One TypeScript API for resilient cloud browser sessions and browser rendering failover.",
   "keywords": [
@@ -16,8 +16,11 @@
     "playwright",
     "typescript"
   ],
-  "homepage": "https://browser-sdk.dev",
+  "homepage": "https://github.com/SoulSniper-V2/browser-sdk#readme",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/SoulSniper-V2/browser-sdk.git",

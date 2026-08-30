@@ -4,8 +4,8 @@ description: Run Browser SDK as a stdio MCP server.
 ---
 
 ```bash
-npm install browser-sdk-mcp
-npx -y browser-sdk-mcp
+npm install @soulsniper-v2/browser-sdk-mcp
+npx -y @soulsniper-v2/browser-sdk-mcp
 ```
 
 Configuration:
@@ -15,7 +15,7 @@ Configuration:
   "mcpServers": {
     "browser-sdk": {
       "command": "npx",
-      "args": ["-y", "browser-sdk-mcp"],
+      "args": ["-y", "@soulsniper-v2/browser-sdk-mcp"],
       "env": {
         "BROWSERBASE_API_KEY": "bb_...",
         "CLOUDFLARE_API_TOKEN": "...",

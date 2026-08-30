@@ -6,7 +6,7 @@ description: Install the package, the optional local browser runtime, and the co
 ## Install the SDK
 
 ```bash
-npm install browser-sdk
+npm install @soulsniper-v2/browser-sdk
 ```
 
 Browser SDK is server-side TypeScript. It expects Node.js 20 or newer. Provider keys are read from environment variables and should not be shipped to a browser bundle.
@@ -30,8 +30,8 @@ The skill teaches coding agents when to use Browser SDK, how the provider route 
 ## Add the MCP server
 
 ```bash
-npm install browser-sdk-mcp
-npx -y browser-sdk-mcp
+npm install @soulsniper-v2/browser-sdk-mcp
+npx -y @soulsniper-v2/browser-sdk-mcp
 ```
 
 The server uses the same environment variables and default provider order as `fromEnv()`. Set `BROWSER_SDK_EXTENDED_PROVIDERS=true` in the MCP environment to add Anchor Browser, Hyperbrowser, and Browser Use Cloud before local.

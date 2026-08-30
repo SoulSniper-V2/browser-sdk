@@ -11,13 +11,13 @@ export function GET() {
 ## Agent install
 
 - Skill: \`npx skills add SoulSniper-V2/browser-sdk --skill browser-sdk\`
-- MCP: \`npx -y browser-sdk-mcp\`
-- CLI: \`npx browser-sdk https://example.com\`
+- MCP: \`npx -y @soulsniper-v2/browser-sdk-mcp\`
+- CLI: \`npx @soulsniper-v2/browser-sdk https://example.com\`
 
 ## Product facts
 
 - Package: \`browser-sdk\`
-- MCP package: \`browser-sdk-mcp\`
+- MCP package: \`@soulsniper-v2/browser-sdk-mcp\`
 - Default route: Browserbase, Cloudflare Browser Run, Browserless, Steel, local
 - Extended route (opt in with \`BROWSER_SDK_EXTENDED_PROVIDERS=true\`): Anchor Browser, Hyperbrowser, Browser Use Cloud, then local
 - Core operations: sessions, content, Markdown, screenshots, PDFs, snapshots, accessibility, extraction, links, crawl

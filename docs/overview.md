@@ -6,7 +6,7 @@ description: One typed TypeScript client for browser sessions, rendering, and pr
 Browser SDK keeps browser infrastructure out of the rest of your application. Configure Browserbase first, Cloudflare Browser Run next, then any other adapters you have. Your caller keeps the same method and receives the provider, latency, and failover trail that produced the result.
 
 ```ts
-import { fromEnv } from "browser-sdk";
+import { fromEnv } from "@soulsniper-v2/browser-sdk";
 
 const browser = fromEnv();
 const page = await browser.markdown("https://docs.example.com");
