@@ -10,3 +10,4 @@ dist
 work/*.png
 work/*.pdf
 work/*.json
+.vercel
