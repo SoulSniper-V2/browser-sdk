@@ -1,0 +1,115 @@
+{
+  "name": "browser-sdk",
+  "version": "0.1.0",
+  "description": "One TypeScript API for resilient cloud browser sessions and browser rendering failover.",
+  "keywords": [
+    "browser",
+    "browser-automation",
+    "browserbase",
+    "cloudflare",
+    "browserless",
+    "steel",
+    "anchor-browser",
+    "hyperbrowser",
+    "browser-use",
+    "ai-agents",
+    "playwright",
+    "typescript"
+  ],
+  "homepage": "https://browser-sdk.dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoulSniper-V2/browser-sdk.git",
+    "directory": "packages/browser-sdk"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "browser-sdk": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./anchor": {
+      "types": "./dist/providers/anchor.d.ts",
+      "import": "./dist/providers/anchor.js",
+      "default": "./dist/providers/anchor.js"
+    },
+    "./browserbase": {
+      "types": "./dist/providers/browserbase.d.ts",
+      "import": "./dist/providers/browserbase.js",
+      "default": "./dist/providers/browserbase.js"
+    },
+    "./browser-use": {
+      "types": "./dist/providers/browser-use.d.ts",
+      "import": "./dist/providers/browser-use.js",
+      "default": "./dist/providers/browser-use.js"
+    },
+    "./cloudflare": {
+      "types": "./dist/providers/cloudflare.d.ts",
+      "import": "./dist/providers/cloudflare.js",
+      "default": "./dist/providers/cloudflare.js"
+    },
+    "./hyperbrowser": {
+      "types": "./dist/providers/hyperbrowser.d.ts",
+      "import": "./dist/providers/hyperbrowser.js",
+      "default": "./dist/providers/hyperbrowser.js"
+    },
+    "./browserless": {
+      "types": "./dist/providers/browserless.d.ts",
+      "import": "./dist/providers/browserless.js",
+      "default": "./dist/providers/browserless.js"
+    },
+    "./steel": {
+      "types": "./dist/providers/steel.d.ts",
+      "import": "./dist/providers/steel.js",
+      "default": "./dist/providers/steel.js"
+    },
+    "./local": {
+      "types": "./dist/providers/local.d.ts",
+      "import": "./dist/providers/local.js",
+      "default": "./dist/providers/local.js"
+    },
+    "./testing": {
+      "types": "./dist/testing/index.d.ts",
+      "import": "./dist/testing/index.js",
+      "default": "./dist/testing/index.js"
+    },
+    "./agent-tools": {
+      "types": "./dist/agent-tools.d.ts",
+      "import": "./dist/agent-tools.js",
+      "default": "./dist/agent-tools.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && chmod +x dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "playwright-core": ">=1.50.0"
+  },
+  "peerDependenciesMeta": {
+    "playwright-core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "playwright-core": "^1.58.2",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

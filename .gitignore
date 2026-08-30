@@ -1,0 +1,12 @@
+node_modules
+dist
+.next
+.source
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+work/*.png
+work/*.pdf
+work/*.json
