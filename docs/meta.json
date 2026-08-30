@@ -1,0 +1,20 @@
+{
+  "title": "Documentation",
+  "pages": [
+    "index",
+    "installation",
+    "quickstart",
+    "---Provider runway---",
+    "providers",
+    "---Build---",
+    "routing",
+    "sessions",
+    "agents",
+    "mcp",
+    "---Reference---",
+    "reference",
+    "machine",
+    "positioning",
+    "security"
+  ]
+}

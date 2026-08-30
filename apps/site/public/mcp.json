@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "browser-sdk": {
+      "command": "npx",
+      "args": ["-y", "browser-sdk-mcp"],
+      "env": {
+        "BROWSERBASE_API_KEY": "bb_...",
+        "CLOUDFLARE_API_TOKEN": "...",
+        "CLOUDFLARE_ACCOUNT_ID": "...",
+        "BROWSERLESS_API_KEY": "...",
+        "STEEL_API_KEY": "...",
+        "ANCHOR_API_KEY": "...",
+        "HYPERBROWSER_API_KEY": "...",
+        "BROWSER_USE_API_KEY": "...",
+        "BROWSER_SDK_EXTENDED_PROVIDERS": "true",
+        "BROWSER_SDK_ALLOWED_DOMAINS": "example.com,app.example.com",
+        "BROWSER_SDK_MAX_SESSIONS": "4",
+        "CHROMIUM_EXECUTABLE_PATH": "/path/to/chromium"
+      }
+    }
+  }
+}

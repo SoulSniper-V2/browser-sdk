@@ -1,0 +1,32 @@
+{
+  "name": "browser-sdk-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 4173",
+    "build": "node ../../scripts/sync-site-docs.mjs && next build",
+    "pretypecheck": "node ../../scripts/sync-site-docs.mjs && fumadocs-mdx",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "next start --port 4173"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/mdx": "^2.0.13",
+    "fumadocs-core": "^16.14.5",
+    "fumadocs-mdx": "^15.3.0",
+    "fumadocs-ui": "^16.14.5",
+    "next": "^16.3.1",
+    "postcss": "^8.5.26",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "typescript": "^5.8.3"
+  }
+}

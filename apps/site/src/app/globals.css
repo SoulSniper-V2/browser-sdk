@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+@import "../styles.css";
+
+.fumadocs-docs-shell {
+  --color-fd-background: #10120f;
+  --color-fd-foreground: #f0f1e8;
+  --color-fd-muted: #151814;
+  --color-fd-muted-foreground: #9b9f95;
+  --color-fd-popover: #151814;
+  --color-fd-popover-foreground: #f0f1e8;
+  --color-fd-card: #151814;
+  --color-fd-card-foreground: #f0f1e8;
+  --color-fd-border: #30362e;
+  --color-fd-primary: #c8ff58;
+  --color-fd-primary-foreground: #11150e;
+  --color-fd-secondary: #20241f;
+  --color-fd-secondary-foreground: #f0f1e8;
+  --color-fd-accent: #20241f;
+  --color-fd-accent-foreground: #fbfcf5;
+  --color-fd-ring: #c8ff58;
+  min-height: 100dvh;
+  background: #10120f;
+  color: #f0f1e8;
+  color-scheme: dark;
+}
+
+.fumadocs-docs-shell [data-fd-nav] {
+  border-bottom-color: #30362e;
+  background: color-mix(in srgb, #10120f 88%, transparent);
+  backdrop-filter: blur(18px);
+}
+
+.fumadocs-docs-shell [data-fd-sidebar] {
+  border-color: #30362e;
+}
+
+.fumadocs-docs-shell article h1,
+.fumadocs-docs-shell article h2,
+.fumadocs-docs-shell article h3 {
+  letter-spacing: -0.045em;
+}
+
+.fumadocs-docs-shell article h1 {
+  font-family: "Iowan Old Style", Baskerville, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.fumadocs-docs-shell article p,
+.fumadocs-docs-shell article li {
+  max-width: 68ch;
+  line-height: 1.75;
+}
+
+.fumadocs-docs-shell article pre {
+  border-color: #30362e;
+  background: #0b0d0b;
+}
