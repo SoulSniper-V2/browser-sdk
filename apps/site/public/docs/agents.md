@@ -3,7 +3,7 @@ title: Agent tools
 description: Give model loops a small, typed browser surface.
 ---
 
-`browser-sdk/agent-tools` exports framework-neutral tools with plain JSON Schema. There is no model-provider dependency.
+`@soulsniper-v2/browser-sdk/agent-tools` exports framework-neutral tools with plain JSON Schema. There is no model-provider dependency.
 
 ```ts
 import { createBrowserTools } from "@soulsniper-v2/browser-sdk/agent-tools";

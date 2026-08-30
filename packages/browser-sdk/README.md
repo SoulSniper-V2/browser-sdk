@@ -48,7 +48,7 @@ import { browserUse } from "@soulsniper-v2/browser-sdk/browser-use";
 import { local } from "@soulsniper-v2/browser-sdk/local";
 ```
 
-The package also exports `browser-sdk/testing` for the isolated memory provider and `browser-sdk/agent-tools` for plain JSON Schema model tools.
+The package also exports `@soulsniper-v2/browser-sdk/testing` for the isolated memory provider and `@soulsniper-v2/browser-sdk/agent-tools` for plain JSON Schema model tools.
 
 ## Agent skill and CLI
 

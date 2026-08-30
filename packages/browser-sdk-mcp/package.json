@@ -1,6 +1,6 @@
 {
   "name": "@soulsniper-v2/browser-sdk-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for Browser SDK provider-neutral browser tools.",
   "type": "module",
   "main": "./dist/index.js",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.5",
-    "@soulsniper-v2/browser-sdk": "0.1.0",
+    "@soulsniper-v2/browser-sdk": "0.1.1",
     "playwright-core": "^1.58.2",
     "zod": "^3.25.76"
   },

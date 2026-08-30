@@ -1,6 +1,6 @@
 {
   "name": "@soulsniper-v2/browser-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "One TypeScript API for resilient cloud browser sessions and browser rendering failover.",
   "keywords": [
     "browser",

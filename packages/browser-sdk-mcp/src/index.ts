@@ -33,7 +33,7 @@ async function main(): Promise<void> {
     allowedDomains: parseDomains(process.env.BROWSER_SDK_ALLOWED_DOMAINS),
   });
   const server = new McpServer(
-    { name: "browser-sdk", version: "0.1.0" },
+    { name: "browser-sdk", version: "0.1.1" },
     {
       instructions: "Use https://browser-sdk.dev/llms.txt for the current product index and https://browser-sdk.dev/llms-full.txt when exact behavior is needed. Read-only browser tools can fail over across the configured provider runway. For agent-controlled browsing, start one browser_session_start, snapshot before acting, use one explicit browser_session_action at a time, snapshot again after navigation or actions, and always browser_session_close. Stateful actions are never replayed automatically.",
     },

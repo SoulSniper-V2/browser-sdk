@@ -5,7 +5,7 @@ license: MIT
 compatibility: Node.js 20+. Network access. Optional BROWSERBASE_API_KEY, CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, BROWSERLESS_API_KEY, STEEL_API_KEY, ANCHOR_API_KEY, HYPERBROWSER_API_KEY, BROWSER_USE_API_KEY, and CHROMIUM_EXECUTABLE_PATH.
 metadata:
   author: SoulSniper-V2
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Browser SDK
