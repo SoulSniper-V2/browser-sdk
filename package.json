@@ -11,7 +11,7 @@
     "dev": "npm run dev --workspace=browser-sdk-site",
     "check": "npm run typecheck && npm test && npm run build",
     "test": "npm run test --workspace=browser-sdk && npm run test --workspace=browser-sdk-mcp",
-    "typecheck": "npm run typecheck --workspace=browser-sdk && npm run typecheck --workspace=browser-sdk-mcp && npm run typecheck --workspace=browser-sdk-site"
+    "typecheck": "npm run typecheck --workspace=browser-sdk && npm run build --workspace=browser-sdk && npm run typecheck --workspace=browser-sdk-mcp && npm run typecheck --workspace=browser-sdk-site"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
